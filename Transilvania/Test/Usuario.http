@@ -1,0 +1,30 @@
+###
+POST  https://localhost:5001/api/usuario/create
+Content-Type: application/json
+
+{
+    "Nome": "claudio",
+    "Senha": "jureminha123",
+    "Cpf": "093.548.569-32",
+    "DataNascimento": "23/06/2000",
+    "Endereco": {
+        "Cep": "81750430",
+        "Rua": "Doutor Bley Zornig",
+        "numero": "123123",
+        "Bairro": "Boqueirão",
+        "Cidade": "Curitiba",
+        "Estado": "Paraná",
+        "Pais": "Chile"
+
+    } 
+}
+
+###
+GET   https://localhost:5001/api/usuario/list
+
+###
+GET  https://localhost:5001/api/usuario/getid/7
+
+###
+DELETE   https://localhost:5001/api/usuario/delete/claudio
+

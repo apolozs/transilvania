@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using Transilvania.Models;
 
-namespace API.Data
+
+namespace Transilvania.Data
 {
     public class DataContext : DbContext
     {
@@ -8,7 +10,8 @@ namespace API.Data
          public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
          //Lista de propieadas das classes que vão virar tabelas no banco.
-         //public DbSet<Produto> Produtos { get; set;}
+         public DbSet<Usuario> Usuarios { get; set;}
+         public DbSet<Hotel> Hoteis { get; set;}
             
     }
 }
