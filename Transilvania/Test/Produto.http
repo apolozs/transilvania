@@ -1,0 +1,18 @@
+###
+POST  https://localhost:5001/api/produto/create
+Content-Type: application/json
+
+{
+    "Nome" : "Batatinha",
+    "Preco": 3.5
+}
+
+###
+GET   https://localhost:5001/api/produto/list
+
+###
+GET  https://localhost:5001/api/produto/getid/3
+
+###
+DELETE   https://localhost:5001/api/produto/delete/Batatinha
+
