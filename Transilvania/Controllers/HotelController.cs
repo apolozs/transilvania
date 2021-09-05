@@ -9,14 +9,14 @@ namespace Transilvania.Controllers
 {
     [ApiController]
     [Route("api/Hotel")]
-    public class EnderecoController : ControllerBase
+    public class HotelController : ControllerBase
 
     {
         
         private readonly DataContext _context;
 
         //Construtor
-        public EnderecoController(DataContext context) => _context = context;
+        public HotelController(DataContext context) => _context = context;
 
         //POST /api/hotel/create
         [HttpPost]

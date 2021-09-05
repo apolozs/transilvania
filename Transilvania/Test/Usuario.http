@@ -7,15 +7,10 @@ Content-Type: application/json
     "Senha": "jureminha123",
     "Cpf": "093.548.569-32",
     "DataNascimento": "23/06/2000",
-    "Endereco": {
-        "Cep": "81750430",
-        "Rua": "Doutor Bley Zornig",
-        "numero": "123123",
-        "Bairro": "Boqueirão",
-        "Cidade": "Curitiba",
-        "Estado": "Paraná",
-        "Pais": "Chile"
-
+    "Endereco": {            
+                "Nome": "rogerthat",
+                "Descricao": "ASDASD",
+                "Preco": 2.2
     } 
 }
 
@@ -23,7 +18,7 @@ Content-Type: application/json
 GET   https://localhost:5001/api/usuario/list
 
 ###
-GET  https://localhost:5001/api/usuario/getid/7
+GET  https://localhost:5001/api/usuario/getid/1
 
 ###
 DELETE   https://localhost:5001/api/usuario/delete/claudio

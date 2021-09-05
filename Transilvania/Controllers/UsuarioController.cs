@@ -32,8 +32,10 @@ namespace Transilvania.Controllers
         [HttpGet]
         [Route("list")]
 
-        public List<Usuario> list() => _context.Usuarios.ToList();
-
+        public List<Usuario> list() 
+        {
+             return _context.Usuarios.ToList(get endereco);
+        }
         //GET/api/usuario/getid/id
         [HttpGet]
         [Route("getid/{id}")]
