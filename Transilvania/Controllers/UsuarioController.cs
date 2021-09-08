@@ -8,7 +8,6 @@ namespace Transilvania.Controllers
 {
     [ApiController]
     [Route("api/usuario")]
-
     public class UsuarioController : ControllerBase
     
     {
@@ -28,14 +27,18 @@ namespace Transilvania.Controllers
             return Created("", usuario);
         }
 
+
+       
+
         //GET /api/usuario/list
         [HttpGet]
         [Route("list")]
-
         public List<Usuario> list() 
         {
-             return _context.Usuarios.ToList(get endereco);
+             return _context.Usuarios.ToList();
         }
+
+
         //GET/api/usuario/getid/id
         [HttpGet]
         [Route("getid/{id}")]

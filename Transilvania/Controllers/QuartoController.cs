@@ -5,66 +5,61 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Transilvania.Controllers
-
 {
     [ApiController]
-    [Route("api/Hotel")]
-    public class HotelController : ControllerBase
+    [Route("api/Quarto")]
+    public class QuartoController : ControllerBase
 
     {
         
         private readonly DataContext _context;
 
         //Construtor
-        public HotelController(DataContext context) => _context = context;
+        public QuartoController(DataContext context) => _context = context;
 
-        //POST /api/hotel/create
         [HttpPost]
         [Route("create")]
-        public IActionResult Create([FromBody] Hotel hotel)
+        public IActionResult Create([FromBody] Quarto quarto)
         {
 
-            _context.Hoteis.Add(hotel);
+            _context.Quartos.Add(quarto);
             _context.SaveChanges();
-            return Created("", hotel);
+            return Created("", quarto);
         }
 
-        //GET /api/hotel/list
         [HttpGet]
         [Route("list")]
-
-        public List<Hotel> list() => _context.Hoteis.ToList();
+        public List<Quarto> list() => _context.Quartos.ToList();
         
-                //GET/api/hotel/getid/id
+        
         [HttpGet]
         [Route("getid/{id}")]
         public IActionResult getid([FromRoute] int id)
         {
             //Buscar um hotel por id
-            Hotel hotel = _context.Hoteis.Find(id);
-            if (hotel == null)
+            Quarto quarto = _context.Quartos.Find(id);
+            if (quarto == null)
             {
                 return NotFound("hotel não encontrado, catapimbas!");
             }
-            return Ok(hotel);
+            return Ok(quarto);
         }
 
-        //GET/api/hotel/delete/xxxx
         [HttpDelete]
-        [Route("delete/{name}")]
-        public IActionResult delete([FromRoute] string name)
+        [Route("delete/{id}")]
+        public IActionResult delete([FromRoute] int id)
         {
             
             //Expressão lambda
             //Buscar UM produto pelo nome
-            Hotel hotel = _context.Hoteis.FirstOrDefault(hotel => hotel.Nome == name);
-            if (hotel == null)
+            Quarto quarto = _context.Quartos.Find(id);
+            if (quarto == null)
             {
                 return NotFound();
             }
-            _context.Hoteis.Remove(hotel);
+            _context.Quartos.Remove(quarto);
             _context.SaveChanges();
-            return Ok(_context.Hoteis.ToList());
+            return Ok(_context.Quartos.ToList());
         }
     }
 }

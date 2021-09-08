@@ -9,7 +9,10 @@ Content-Type: application/json
                 "Adicionais": "Anão",
                 "TipoDeCamas": "King",
                 "ImagemHotel": "Jpeg",
-                "Cidade": "Cu ritiba"
+                "Quarto": {
+                    "NomeQuarto": "volinho"
+                },
+                "Cidade": "Curitiba"
             
 }
 
