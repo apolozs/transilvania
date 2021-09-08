@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace Transilvania.Models
 {
     public class Hotel
@@ -8,7 +11,7 @@ namespace Transilvania.Models
         public string Adicionais { get; set; }
         public string TipoDeCamas { get; set; }
         public string ImagemHotel { get; set; } 
-        public Quarto Quarto { get; set; }
+        public List<Quarto> Quarto { get; set; }
         public string Cidade {get; set; }
     }
 }
