@@ -3,6 +3,7 @@ using Transilvania.Data;
 using Transilvania.Models;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Transilvania.Controllers
 
@@ -33,7 +34,7 @@ namespace Transilvania.Controllers
         [HttpGet]
         [Route("list")]
 
-        public List<Hotel> list() => _context.Hoteis.ToList();
+        public List<Hotel> list() => _context.Hoteis.Include(x => x.Quarto).ToList();
         
                 //GET/api/hotel/getid/id
         [HttpGet]
