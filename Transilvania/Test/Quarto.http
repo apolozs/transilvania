@@ -19,7 +19,6 @@ Content-Type: application/json
             "CheckIn": "12"
         }]    
         
-
 }
 
 ###
@@ -35,7 +34,7 @@ GET  https://localhost:5001/api/quarto/getlistquartoporid/6
 GET  https://localhost:5001/api/quarto/getlisthistoricoquartoporid/6
 
 ###
-DELETE   https://localhost:5001/api/quarto/delete/2
+DELETE   https://localhost:5001/api/quarto/delete/1
 //fazer o delete do quarto e do historico junto
 
 //fazer o delete somente do Histórico controler

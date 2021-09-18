@@ -73,12 +73,14 @@ namespace Transilvania.Controllers
             
             //Expressão lambda
             //Buscar UM produto pelo nome
-            Quarto quarto = _context.Quartos.Find(id);
+            Quarto quarto = _context.Quartos.Include(x => x.Historico).FirstOrDefault(x => x.Id == id);
             if (quarto == null)
             {
                 return NotFound();
             }
             _context.Quartos.Remove(quarto);
+            _context.Historicos.RemoveRange(quarto.Historico);
+             //Include(x => x.Historico).
             _context.SaveChanges();
             return Ok(_context.Quartos.ToList());
         }
