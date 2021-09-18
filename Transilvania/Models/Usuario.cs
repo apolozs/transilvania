@@ -9,6 +9,7 @@ namespace Transilvania.Models
         public string Cpf { get; set; }
         public string DataNascimento { get; set; }
         public List<Quarto> Quarto { get; set; }
+        public List<Historico> Adicionais { get; set; }
        
     }
 }

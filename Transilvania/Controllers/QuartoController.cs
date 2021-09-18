@@ -28,24 +28,44 @@ namespace Transilvania.Controllers
             return Created("", quarto);
         }
 
+        
+
         [HttpGet]
-        [Route("list")]
+        [Route("listquartocomhistorico")]
         public List<Quarto> list() => _context.Quartos.Include(x => x.Historico).ToList();
+
+        [HttpGet]
+        [Route("listquarto")]
+        public List<Quarto> listquarto() => _context.Quartos.ToList();
         
         
         [HttpGet]
-        [Route("getid/{id}")]
+        [Route("getlistquartoporid/{id}")]
         public IActionResult getid([FromRoute] int id)
         {
             //Buscar um hotel por id
             Quarto quarto = _context.Quartos.Find(id);
             if (quarto == null)
             {
-                return NotFound("hotel não encontrado, catapimbas!");
+                return NotFound("Quarto não encontrado, catapimbas!");
             }
             return Ok(quarto);
         }
 
+        [HttpGet]
+        [Route("getlisthistoricoquartoporid/{id}")]
+        public IActionResult getlisthistoricoquartoporid([FromRoute] int id)
+        {
+            //Buscar um hotel por id
+            Quarto quarto = _context.Quartos.Include(x => x.Historico).FirstOrDefault(x => x.Id == id);
+            if (quarto == null)
+            {
+                return NotFound("Quarto não encontrado, catapimbas!");
+            }
+            return Ok(quarto); //Quartos.Include(x => x.Historico).ToList();
+        }
+
+        //GET/api/quarto/delete/xxxx
         [HttpDelete]
         [Route("delete/{id}")]
         public IActionResult delete([FromRoute] int id)

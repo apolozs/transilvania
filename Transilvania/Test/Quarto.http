@@ -4,19 +4,38 @@ Content-Type: application/json
 
 {
      
-                "nomeQuarto": "Teste",
-                "Historico": [{
-                    "CheckIn": "10/02",
-                    "CheckOut": "10/03"
-                }]
-                
+        "NomeQuarto": "001",
+        "QuantidadeDeCamas": 1,
+        "TipoDeCamas": "king",
+        "ImagemQuarto": "imagem01",
+        "Preco": 10.0,  
+        "Historico":[{
+            "CheckIn": "10"
+        },
+        {
+            "CheckIn": "11"
+        },
+        {
+            "CheckIn": "12"
+        }]    
+        
+
 }
 
 ###
-GET   https://localhost:5001/api/quarto/list
+GET   https://localhost:5001/api/quarto/listquartocomhistorico
 
 ###
-GET  https://localhost:5001/api/quarto/getid/1
+GET   https://localhost:5001/api/quarto/listquarto
+
+###
+GET  https://localhost:5001/api/quarto/getlistquartoporid/6
+
+###
+GET  https://localhost:5001/api/quarto/getlisthistoricoquartoporid/6
 
 ###
 DELETE   https://localhost:5001/api/quarto/delete/2
+//fazer o delete do quarto e do historico junto
+
+//fazer o delete somente do Histórico controler

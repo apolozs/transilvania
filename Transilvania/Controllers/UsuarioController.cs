@@ -27,9 +27,8 @@ namespace Transilvania.Controllers
             _context.SaveChanges();
             return Created("", usuario);
         }
+ 
 
-
-       
 
         //GET /api/usuario/list
         [HttpGet]
