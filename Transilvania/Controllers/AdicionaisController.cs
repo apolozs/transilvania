@@ -33,7 +33,7 @@ namespace Transilvania.Controllers
         [HttpGet]
         [Route("list")]
 
-        public List<Adicionais> list() => _context.Adicionais.ToList();
+            public List<Adicionais> list() => _context.Adicionais.ToList();
         
                 //GET/api/hotel/getid/id
         [HttpGet]

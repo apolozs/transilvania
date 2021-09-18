@@ -3,6 +3,7 @@ using Transilvania.Data;
 using Transilvania.Models;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Transilvania.Controllers
 {
@@ -35,7 +36,9 @@ namespace Transilvania.Controllers
         [Route("list")]
         public List<Usuario> list() 
         {
-             return _context.Usuarios.ToList();
+             return _context.Usuarios.Include(x => x.Quarto).ThenInclude(x => x.Historico).ToList();
+            //  Courses
+            //     .Include(i => i.Modules.Select(s => s.Chapters)).Include(i => i.Lab)
         }
 
 

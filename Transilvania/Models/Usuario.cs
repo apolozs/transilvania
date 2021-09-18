@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace Transilvania.Models
 {
     public class Usuario
@@ -7,6 +8,7 @@ namespace Transilvania.Models
         public string Senha { get; set; }
         public string Cpf { get; set; }
         public string DataNascimento { get; set; }
+        public List<Quarto> Quarto { get; set; }
        
     }
 }

@@ -11,10 +11,8 @@ namespace Transilvania.Data
 
          //Lista de propieadas das classes que vão virar tabelas no banco.
             public DbSet<Usuario> Usuarios { get; set;}
-            public DbSet<Hotel> Hoteis { get; set;}
             public DbSet<Quarto> Quartos { get; set;}
             public DbSet<Historico> Historicos { get; set;}
-            public DbSet<Reserva> Reservas { get; set;}
             public DbSet<Adicionais> Adicionais { get; set;}
              
             

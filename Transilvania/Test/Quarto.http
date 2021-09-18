@@ -4,7 +4,11 @@ Content-Type: application/json
 
 {
      
-                "nomeQuarto": "Teste"
+                "nomeQuarto": "Teste",
+                "Historico": [{
+                    "CheckIn": "10/02",
+                    "CheckOut": "10/03"
+                }]
                 
 }
 

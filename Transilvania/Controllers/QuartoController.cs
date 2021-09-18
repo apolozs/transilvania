@@ -3,6 +3,7 @@ using Transilvania.Data;
 using Transilvania.Models;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Transilvania.Controllers
 {
@@ -29,7 +30,7 @@ namespace Transilvania.Controllers
 
         [HttpGet]
         [Route("list")]
-        public List<Quarto> list() => _context.Quartos.ToList();
+        public List<Quarto> list() => _context.Quartos.Include(x => x.Historico).ToList();
         
         
         [HttpGet]

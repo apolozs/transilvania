@@ -4,6 +4,6 @@ namespace Transilvania.Models
     {
         public int Id { get; set; }
         public string CheckIn { get; set; }
-        public string Checkout { get; set; }
+        public string CheckOut { get; set; }
     }
 }

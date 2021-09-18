@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace Transilvania.Models
 {
     public class Quarto
@@ -8,6 +9,7 @@ namespace Transilvania.Models
         public string QuantidadeDeCamas { get; set; }
         public string TipoDeCamas { get; set; }
         public string ImagemQuarto { get; set; }
-        public string Preço { get; set; }        
+        public string Preço { get; set; }      
+        public List<Historico> Historico { get; set; }  
     }
 }
