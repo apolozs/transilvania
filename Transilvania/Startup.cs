@@ -28,6 +28,14 @@ namespace Transilvania
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Configurar a politica de CORS para receber requisições de qualquer origem
+            services.AddCors(
+                options => {
+                    options.AddPolicy("CorsPolicy", builder => builder
+                        .AllowAnyOrigin());
+                }
+            );
+
             //Configurar todas as injeções de dependencia da sua aplicação.
 
             services.AddDbContext<DataContext>
@@ -51,6 +59,7 @@ namespace Transilvania
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
             }
+            app.UseCors("CorsPolicy");
 
             app.UseHttpsRedirection();
 
