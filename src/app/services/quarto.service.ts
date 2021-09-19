@@ -13,7 +13,7 @@ export class QuartoService {
 
 
   list(): Observable<Quarto[]> {
-      return this.http.get<Quarto[]>(`${this.baseURL}/list`);
+      return this.http.get<Quarto[]>(`${this.baseURL}/listquarto`);
   }
 
 }
