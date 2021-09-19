@@ -53,7 +53,7 @@ namespace Transilvania.Controllers
         public IActionResult getid([FromRoute] int id)
         {
             //Buscar um hotel por id
-            Quarto quarto = _context.Quartos.Find(id);
+            Quarto quarto = _context.Quartos.FirstOrDefault(x => x.Id == id);
             if (quarto == null)
             {
                 return NotFound("Quarto não encontrado, catapimbas!");
@@ -82,5 +82,19 @@ namespace Transilvania.Controllers
             _context.SaveChanges();
             return Ok(_context.Quartos.ToList());
         }
+
+        //Buscar as reservas para este quarto
+         [HttpGet]
+         [Route("{id}/reservas")]
+         public IActionResult reservasByQuarto([FromRoute] int id)
+         {
+             // Buscar um hotel por id
+            List<Reserva> reserva = _context.Reservas.Where(x => x.Quarto.Id == id).ToList();
+             if (reserva == null)
+             {
+                 return NotFound("reserva não encontrado, catapimbas!");
+             }
+             return Ok(reserva); 
+         }
     }
 }

@@ -46,6 +46,7 @@ namespace Transilvania.Controllers
             {
                 return NotFound("hotel não encontrado, catapimbas!");
             }
+
             return Ok(adicionais);
         }
 

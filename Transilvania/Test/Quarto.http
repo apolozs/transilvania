@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
      
-        "NomeQuarto": "3",
+        "NomeQuarto": "2",
         "QuantidadeDeCamas": 1,
         "TipoDeCamas": "king",
         "ImagemQuarto": "imagem01",
@@ -17,10 +17,11 @@ Content-Type: application/json
 GET   https://localhost:5001/api/quarto/listquarto
 
 ###
-GET  https://localhost:5001/api/quarto/getlistquartoporid/6
+GET  https://localhost:5001/api/quarto/getlistquartoporid/1
 
 ###
 DELETE   https://localhost:5001/api/quarto/delete/1
-//fazer o delete do quarto e do historico junto
 
-//fazer o delete somente do Histórico controler
+###
+GET https://localhost:5001/api/quarto/1/reservas
+

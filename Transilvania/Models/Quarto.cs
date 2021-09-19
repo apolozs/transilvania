@@ -8,6 +8,9 @@ namespace Transilvania.Models
         public int QuantidadeDeCamas { get; set; }
         public string TipoDeCamas { get; set; }
         public string ImagemQuarto { get; set; }
-        public double Preco { get; set; }      
+        public double Preco { get; set; }    
+        
+        
+
     }
 }

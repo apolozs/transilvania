@@ -6,8 +6,8 @@ using Transilvania.Models;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using static System.Exception;
 using System.Net;
+
 
 
 
@@ -30,18 +30,39 @@ namespace Transilvania.Controllers
         public IActionResult Create([FromBody] Reserva reserva, [FromRoute] int idUsuario, int idQuarto)
         {
             try
-            {
+            {   
+                if (reserva.CheckIn > reserva.CheckOut)
+                {
+                    throw new Exception ("Você não pode sair do Hotel sem ter entrado ... Ai que burro");
+                }
                 Usuario usuario = _context.Usuarios.Find(idUsuario);
-                Quarto quarto = _context.Quartos.Find(idQuarto);
+                Quarto quarto = _context.Quartos.FirstOrDefault(x => x.Id == idQuarto); //Include(x => x.Reservas).
                 reserva.Usuario = usuario;
                 reserva.Quarto = quarto;
                 if(reserva.Usuario == null || reserva.Quarto == null)
                     throw new Exception("Não foi possivel gerar uma reserva");
                     
+                List<Reserva> reservasQuarto = _context.Reservas.Where(x => x.Quarto.Id == quarto.Id).ToList();
+                var ocupado = false;
+                reservasQuarto.ForEach(x => {
+                    if((reserva.CheckIn >= x.CheckIn && reserva.CheckIn <= x.CheckOut)||(reserva.CheckOut >= x.CheckOut && reserva.CheckOut <= x.CheckOut))
+                    {
+                        ocupado = true;
+
+                    }else if((x.CheckIn >= reserva.CheckIn && x.CheckIn <= reserva.CheckOut)||(x.CheckOut >= reserva.CheckOut && x.CheckOut <= reserva.CheckOut))
+                    {
+                        ocupado = true;
+                    }
+                });
+                if (ocupado)
+                {
+                    throw new Exception("Data já reservada");
+                }
                 _context.Reservas.Add(reserva);
                 _context.SaveChanges();
                 return Created("", reserva); 
             }
+            
             catch (Exception ex)
             {
                 return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message );
