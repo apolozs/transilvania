@@ -61,7 +61,6 @@ namespace Transilvania.Controllers
             return Ok(quarto);
         }
 
-
         //GET/api/quarto/delete/xxxx
         [HttpDelete]
         [Route("delete/{id}")]

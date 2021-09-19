@@ -24,6 +24,7 @@ namespace Transilvania.Controllers
         //Construtor
         public ReservaController(DataContext context) => _context = context;
 
+        //!= diferente // || ou // ? IF
         //POST /api/reserva/create
         [HttpPost]
         [Route("create/{idUsuario}/{idQuarto}")]
@@ -70,8 +71,6 @@ namespace Transilvania.Controllers
 
         }
  
-
-
         //GET /api/reserva/list
         [HttpGet]
         [Route("list")]
@@ -86,11 +85,7 @@ namespace Transilvania.Controllers
             {
                 return StatusCode(500, ex);
             }
-           
         }
-         //!= diferente // || ou // ? IF
-
-        
 
         [HttpGet]
          [Route("listbyusuario/{id}")]
@@ -104,9 +99,6 @@ namespace Transilvania.Controllers
              }
              return Ok(reserva); //Quartos.Include(x => x.Historico).ToList();
          }
-
-
-
 
         //GET/api/reserva/getid/id
         [HttpGet]

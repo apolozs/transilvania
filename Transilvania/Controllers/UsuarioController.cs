@@ -59,20 +59,23 @@ namespace Transilvania.Controllers
 
         //GET/api/usuario/getid/id
         [HttpGet]
-        [Route("getid/{id}")]
-    
-        public IActionResult getid([FromRoute] int id)
+        [Route("login/{id}/{senha}")]
+        public IActionResult login([FromRoute] int id, string senha)
         {
             //Buscar um usuario por id
             Usuario usuario = _context.Usuarios.Find(id);
             if (usuario == null)
             {
                 return NotFound("Usuario não encontrado, catapimbas!");
+            }else if (usuario.Senha == senha)
+            {
+                return Ok(usuario);
             }
-            return Ok(usuario);
+        
+            return NotFound("Senha Incorreta!");
         }
 
-        //GET/api/usuario/delete/xxxx
+        //GET/api/usuario/delete/x
         [HttpDelete]
         [Route("delete/{id}")]
         public IActionResult delete([FromRoute] int id)

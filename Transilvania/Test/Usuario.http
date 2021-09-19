@@ -15,7 +15,7 @@ Content-Type: application/json
 GET   https://localhost:5001/api/usuario/list
 
 ###
-GET  https://localhost:5001/api/usuario/getid/3
+GET  https://localhost:5001/api/usuario/login/1/jureminha
 
 ###
 DELETE   https://localhost:5001/api/usuario/delete/3
