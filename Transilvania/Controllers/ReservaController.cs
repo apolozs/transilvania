@@ -1,9 +1,13 @@
+using System;
 using System.Collections.Generic;
 using Transilvania.Data;
 using Transilvania.Models;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using static System.Exception;
+
+
 
 namespace Transilvania.Controllers
 {
@@ -23,13 +27,24 @@ namespace Transilvania.Controllers
         [Route("create/{idUsuario}/{idQuarto}")]
         public IActionResult Create([FromBody] Reserva reserva, [FromRoute] int idUsuario, int idQuarto)
         {
-            Usuario usuario = _context.Usuarios.Find(idUsuario);
-            Quarto quarto = _context.Quartos.Find(idQuarto);
-            reserva.Usuario = usuario;
-            reserva.Quarto = quarto;
-            _context.Reservas.Add(reserva);
-            _context.SaveChanges();
-            return Created("", reserva);
+            try
+            {
+                Usuario usuario = _context.Usuarios.Find(idUsuario);
+                Quarto quarto = _context.Quartos.Find(idQuarto);
+                reserva.Usuario = usuario;
+                reserva.Quarto = quarto;
+                if(reserva.Usuario == null || reserva.Quarto == null)
+                    throw new Exception("Não foi possivel gerar uma reserva");
+                    
+                _context.Reservas.Add(reserva);
+                _context.SaveChanges();
+                return Created("", reserva); 
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message );
+            }
+
         }
  
 
