@@ -1,4 +1,4 @@
-export interface Quarto {
+export interface Usuario {
   Id: number;
   NomeQuarto: string;
   QuantidadeDeCamas: number;

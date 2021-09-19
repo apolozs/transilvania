@@ -1,8 +1,13 @@
-export interface Quarto {
+import { Data } from '@angular/router';
+import {Adicionais} from './Adicionais';
+export interface Reserva {
   Id: number;
-  NomeQuarto: string;
-  QuantidadeDeCamas: string; //Verificar como que funciona no front quando tem relacionamento aqui é um relacionamento de quarto com reserva
-  TipoDeCamas: string; // Aqui é um relacionamento de Usuario com reserva
-  ImagemQuarto: string; //Aqui é um relacionamento de Adicionais com Reserva
-  Preco: number;
+  Quarto:{ id:number };
+  Usuario:{ id:number };
+  Adicionais: Adicionais[];
+  CheckIn: Data;
+  CheckOut: Data;
+
+
+
 }
