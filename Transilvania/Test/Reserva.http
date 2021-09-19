@@ -1,6 +1,6 @@
 
 ###
-POST   https://localhost:5001/api/reserva/create/1/3
+POST   https://localhost:5001/api/reserva/create/1/2
 Content-Type: application/json
 
 {

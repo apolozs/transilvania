@@ -1,3 +1,4 @@
+using System.Runtime.Intrinsics.X86;
 using System;
 using System.Collections.Generic;
 using Transilvania.Data;
@@ -6,6 +7,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using static System.Exception;
+using System.Net;
 
 
 
@@ -42,7 +44,7 @@ namespace Transilvania.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message );
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message );
             }
 
         }
@@ -52,11 +54,20 @@ namespace Transilvania.Controllers
         //GET /api/reserva/list
         [HttpGet]
         [Route("list")]
-        public List<Reserva> list() 
+        public IActionResult list() 
         {
-             return _context.Reservas.Include(x => x.Usuario).Include(x => x.Quarto).ToList();
-            
+            try
+            {
+                var result = _context.Reservas.Include(x => x.Usuario).Include(x => x.Quarto).ToList();
+                return result != null && result.Any() ? StatusCode(200, result): StatusCode(404, result); 
+            }
+            catch (System.Exception ex)
+            {
+                return StatusCode(500, ex);
+            }
+           
         }
+         //!= diferente // || ou // ? IF
 
         
 
@@ -64,7 +75,7 @@ namespace Transilvania.Controllers
          [Route("listbyusuario/{id}")]
          public IActionResult listbyusuario([FromRoute] int id)
          {
-             //Buscar um hotel por id
+             // Buscar um hotel por id
             List<Reserva> reserva = _context.Reservas.Include(x => x.Quarto).Include(x => x.Usuario).Where(x => x.Usuario.Id == id).ToList();
              if (reserva == null)
              {
