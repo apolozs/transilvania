@@ -4,6 +4,8 @@ using Transilvania.Models;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
+using System;
 
 namespace Transilvania.Controllers
 {
@@ -23,9 +25,22 @@ namespace Transilvania.Controllers
         [Route("create")]
         public IActionResult Create([FromBody] Usuario usuario)
         {
-            _context.Usuarios.Add(usuario);
-            _context.SaveChanges();
-            return Created("", usuario);
+            try
+            {
+                if(usuario.Nome == null || usuario.Senha == null || usuario.Cpf == null)
+                    throw new Exception("Não foi possivel gerar um quarto por falta de dados");
+                
+                _context.Usuarios.Add(usuario);
+                _context.SaveChanges();
+                return Created("", usuario);
+            }
+            catch (Exception ex)
+            {
+                
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message );
+           
+            }
+
         }
  
 

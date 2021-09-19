@@ -4,9 +4,9 @@ using Transilvania.Models;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Exception;
-using static System.Exception;
+using System;
 using System.Net;
+
 
 namespace Transilvania.Controllers
 {
@@ -29,14 +29,14 @@ namespace Transilvania.Controllers
             try
             {
                 if(quarto.NomeQuarto == null || quarto.QuantidadeDeCamas == 0 || quarto.TipoDeCamas == null || quarto.ImagemQuarto == null || quarto.Preco == 0)
-                    throw new System.Exception("Não foi possivel gerar uma reserva");
+                    throw new Exception("Não foi possivel gerar um quarto por falta de dados");
 
                 _context.Quartos.Add(quarto);
                 _context.SaveChanges();
                 return Created("", quarto);
 
-            }
-            catch ( System.Exception ex)
+            }   
+            catch (Exception ex)
             {
 
                 return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message );
@@ -44,11 +44,9 @@ namespace Transilvania.Controllers
             }
         }
 
-        
         [HttpGet]
         [Route("listquarto")]
         public List<Quarto> listquarto() => _context.Quartos.ToList();
-        
         
         [HttpGet]
         [Route("getlistquartoporid/{id}")]
@@ -67,16 +65,18 @@ namespace Transilvania.Controllers
         //GET/api/quarto/delete/xxxx
         [HttpDelete]
         [Route("delete/{id}")]
+
         public IActionResult delete([FromRoute] int id)
         {
             
             //Expressão lambda
             //Buscar UM produto pelo nome
-           Quarto quarto = _context.Quartos.Find(id);
+            Quarto quarto = _context.Quartos.Find(id);
             if (quarto == null)
             {
                 return NotFound();
             }
+
             _context.Quartos.Remove(quarto);
              //Include(x => x.Historico).
             _context.SaveChanges();

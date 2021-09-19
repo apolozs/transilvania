@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 namespace Transilvania.Models
 {
@@ -7,7 +8,7 @@ namespace Transilvania.Models
         public string Nome { get; set; }
         public string Senha { get; set; }
         public string Cpf { get; set; }
-        public string DataNascimento { get; set; }
+        public DateTime DataNascimento { get; set; }
        
     }
 }
