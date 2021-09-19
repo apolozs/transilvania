@@ -29,11 +29,6 @@ namespace Transilvania.Controllers
         }
 
         
-
-        [HttpGet]
-        [Route("listquartocomhistorico")]
-        public List<Quarto> list() => _context.Quartos.Include(x => x.Historico).ToList();
-
         [HttpGet]
         [Route("listquarto")]
         public List<Quarto> listquarto() => _context.Quartos.ToList();
@@ -52,18 +47,6 @@ namespace Transilvania.Controllers
             return Ok(quarto);
         }
 
-        [HttpGet]
-        [Route("getlisthistoricoquartoporid/{id}")]
-        public IActionResult getlisthistoricoquartoporid([FromRoute] int id)
-        {
-            //Buscar um hotel por id
-            Quarto quarto = _context.Quartos.Include(x => x.Historico).FirstOrDefault(x => x.Id == id);
-            if (quarto == null)
-            {
-                return NotFound("Quarto não encontrado, catapimbas!");
-            }
-            return Ok(quarto); //Quartos.Include(x => x.Historico).ToList();
-        }
 
         //GET/api/quarto/delete/xxxx
         [HttpDelete]
@@ -73,13 +56,12 @@ namespace Transilvania.Controllers
             
             //Expressão lambda
             //Buscar UM produto pelo nome
-            Quarto quarto = _context.Quartos.Include(x => x.Historico).FirstOrDefault(x => x.Id == id);
+           Quarto quarto = _context.Quartos.Find(id);
             if (quarto == null)
             {
                 return NotFound();
             }
             _context.Quartos.Remove(quarto);
-            _context.Historicos.RemoveRange(quarto.Historico);
              //Include(x => x.Historico).
             _context.SaveChanges();
             return Ok(_context.Quartos.ToList());

@@ -3,53 +3,11 @@ POST  https://localhost:5001/api/usuario/create
 Content-Type: application/json
 
 {
-    "Nome": "claudio",
+    "Nome": "andrey",
     "Senha": "jureminha123",
     "Cpf": "093.548.569-32",
-    "DataNascimento": "23/06/2000",
-    "Quarto": [{
-        "NomeQuarto": "Solteiro",
-        "TipoDeCamas": "Viuvo",
-        "Historico": [{
-            "CheckIn": "10/02/2021",
-            "CheckOut": "12/03/2021"
-        },
-        {
-            "CheckIn": "12/02/2021",
-            "CheckOut": "13/03/2021"
-        },
-        {
-            "CheckIn": "14/02/2021",
-            "CheckOut": "15/03/2021"
-        },
-        {
-            "CheckIn": "22/02/2021",
-            "CheckOut": "31/03/2021"
-        }
-        ]
-    },
-    {
-        "NomeQuarto": "Solteiro",
-        "TipoDeCamas": "Viuvo",
-        "Historico": [{
-            "CheckIn": "10/02/2021",
-            "CheckOut": "12/03/2021"
-        },
-        {
-            "CheckIn": "12/02/2021",
-            "CheckOut": "13/03/2021"
-        },
-        {
-            "CheckIn": "14/02/2021",
-            "CheckOut": "15/03/2021"
-        },
-        {
-            "CheckIn": "22/02/2021",
-            "CheckOut": "31/03/2021"
-        }
-        ]
-    }
-    ]
+    "DataNascimento": "23/06/2000"
+    
    
     
     
@@ -63,5 +21,5 @@ GET   https://localhost:5001/api/usuario/list
 GET  https://localhost:5001/api/usuario/getid/3
 
 ###
-DELETE   https://localhost:5001/api/usuario/delete/claudio
+DELETE   https://localhost:5001/api/usuario/delete/3
 

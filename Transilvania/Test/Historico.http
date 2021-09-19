@@ -1,4 +1,0 @@
-
-###
-GET   https://localhost:5001/api/historico/list
-Content-Type: application/json

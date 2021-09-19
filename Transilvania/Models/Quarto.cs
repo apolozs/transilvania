@@ -9,6 +9,5 @@ namespace Transilvania.Models
         public string TipoDeCamas { get; set; }
         public string ImagemQuarto { get; set; }
         public double Preco { get; set; }      
-        public List<Historico> Historico { get; set; }  
     }
 }

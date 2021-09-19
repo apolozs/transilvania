@@ -4,34 +4,20 @@ Content-Type: application/json
 
 {
      
-        "NomeQuarto": "001",
+        "NomeQuarto": "3",
         "QuantidadeDeCamas": 1,
         "TipoDeCamas": "king",
         "ImagemQuarto": "imagem01",
-        "Preco": 10.0,  
-        "Historico":[{
-            "CheckIn": "10"
-        },
-        {
-            "CheckIn": "11"
-        },
-        {
-            "CheckIn": "12"
-        }]    
+        "Preco": 10.0
         
 }
 
-###
-GET   https://localhost:5001/api/quarto/listquartocomhistorico
 
 ###
 GET   https://localhost:5001/api/quarto/listquarto
 
 ###
 GET  https://localhost:5001/api/quarto/getlistquartoporid/6
-
-###
-GET  https://localhost:5001/api/quarto/getlisthistoricoquartoporid/6
 
 ###
 DELETE   https://localhost:5001/api/quarto/delete/1

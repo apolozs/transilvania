@@ -35,9 +35,10 @@ namespace Transilvania.Controllers
         [Route("list")]
         public List<Usuario> list() 
         {
-             return _context.Usuarios.Include(x => x.Quarto).ThenInclude(x => x.Historico).ToList();
+            //  return _context.Usuarios.Include(x => x.Quarto).ThenInclude(x => x.Historico).ToList();
             //  Courses
-            //     .Include(i => i.Modules.Select(s => s.Chapters)).Include(i => i.Lab)
+            return _context.Usuarios.ToList();
+           
         }
 
 
@@ -58,13 +59,13 @@ namespace Transilvania.Controllers
 
         //GET/api/usuario/delete/xxxx
         [HttpDelete]
-        [Route("delete/{name}")]
-        public IActionResult delete([FromRoute] string name)
+        [Route("delete/{id}")]
+        public IActionResult delete([FromRoute] int id)
         {
             
             //Expressão lambda
             //Buscar UM produto pelo nome
-            Usuario usuario = _context.Usuarios.FirstOrDefault(usuario => usuario.Nome == name);
+            Usuario usuario = _context.Usuarios.Find(id);
             if (usuario == null)
             {
                 return NotFound();

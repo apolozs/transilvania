@@ -1,0 +1,16 @@
+
+###
+POST   https://localhost:5001/api/reserva/create/1/3
+Content-Type: application/json
+
+{
+    "CheckIn": "12/02",
+    "CheckOut": "15/02"
+}
+
+
+###
+GET https://localhost:5001/api/reserva/list
+
+###
+GET https://localhost:5001/api/reserva/listbyusuario/1
