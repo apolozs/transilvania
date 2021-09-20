@@ -3,7 +3,7 @@ POST  https://localhost:5001/api/quarto/create
 Content-Type: application/json
 
 {
-     
+ 
         "NomeQuarto": "2",
         "QuantidadeDeCamas": 1,
         "TipoDeCamas": "king",

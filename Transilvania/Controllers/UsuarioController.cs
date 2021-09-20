@@ -28,7 +28,7 @@ namespace Transilvania.Controllers
             try
             {
                 if(usuario.Nome == null || usuario.Senha == null || usuario.Cpf == null)
-                    throw new Exception("Não foi possivel gerar um quarto por falta de dados");
+                    throw new Exception("Não foi possivel gerar um usuario por falta de dados");
                 
                 _context.Usuarios.Add(usuario);
                 _context.SaveChanges();
