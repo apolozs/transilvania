@@ -1,12 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { Quarto } from './models/Quarto';
-import { QuartoService } from './services/quarto.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  styles: [""]
 })
+
+export class AppComponent{
+  
+  title = 'Tic Tac Toe';
+  isAuthenticated = false;
+  
+  async logout(): Promise<void> {
+    // todo
+  }
+}
+
+
+/*
 export class AppComponent implements OnInit {
   teste = "TESTE"
   listquartos : Quarto[] = [];
@@ -18,3 +29,4 @@ export class AppComponent implements OnInit {
   }
   
 }
+*/
