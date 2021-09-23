@@ -5,6 +5,7 @@ Content-Type: application/json
 {
     "Nome": "jubileu",
     "Senha": "jureminha123",
+    "Cpf": "123123123",
     "DataNascimento": "2000-06-19"
     
 }

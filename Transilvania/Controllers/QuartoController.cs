@@ -17,9 +17,10 @@ namespace Transilvania.Controllers
     {
         
         private readonly DataContext _context;
-
+        
         //Construtor
         public QuartoController(DataContext context) => _context = context;
+  
 
         [HttpPost]
         [Route("create")]
@@ -95,5 +96,6 @@ namespace Transilvania.Controllers
              }
              return Ok(reserva); 
          }
+         
     }
 }
