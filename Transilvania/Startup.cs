@@ -32,7 +32,9 @@ namespace Transilvania
             services.AddCors(
                 options => {
                     options.AddPolicy("CorsPolicy", builder => builder
-                        .AllowAnyOrigin());
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
                 }
             );
 
