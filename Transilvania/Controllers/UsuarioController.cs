@@ -59,11 +59,11 @@ namespace Transilvania.Controllers
 
         //GET/api/usuario/getid/id
         [HttpGet]
-        [Route("login/{id}/{senha}")]
-        public IActionResult login([FromRoute] int id, string senha)
+        [Route("login/{cpf}/{senha}")]
+        public IActionResult login([FromRoute] string cpf, string senha)
         {
             //Buscar um usuario por id
-            Usuario usuario = _context.Usuarios.Find(id);
+            Usuario usuario = _context.Usuarios.First(x => x.Cpf == cpf);
             if (usuario == null)
             {
                 return NotFound("Usuario não encontrado, catapimbas!");
