@@ -15,6 +15,10 @@ Content-Type: application/json
 GET   https://localhost:5001/api/usuario/list
 
 ###
+GET  https://localhost:5001/api/usuario/getUsuarioById/3
+
+
+###
 GET  https://localhost:5001/api/usuario/login/999/jureminha123
 
 ###

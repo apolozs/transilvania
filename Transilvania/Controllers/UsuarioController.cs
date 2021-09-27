@@ -42,6 +42,19 @@ namespace Transilvania.Controllers
             }
 
         }
+
+        [HttpGet]
+        [Route("getUsuarioById/{id}")]
+        public IActionResult getUsuarioById([FromRoute] int id)
+        {
+            //Buscar um hotel por id
+            Usuario usuario = _context.Usuarios.FirstOrDefault(x => x.Id == id);
+            if (usuario == null)
+            {
+                return NotFound("Quarto não encontrado, catapimbas!");
+            }
+            return Ok(usuario);
+        }
  
 
 
