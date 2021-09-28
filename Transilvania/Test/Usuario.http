@@ -24,3 +24,14 @@ GET  https://localhost:5001/api/usuario/login/999/jureminha123
 ###
 DELETE   https://localhost:5001/api/usuario/delete/3
 
+###
+PUT   https://localhost:5001/api/usuario/update
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nome": "jubileu",
+  "senha": "TESTE",
+  "cpf": "999",
+  "dataNascimento": "2000-06-19T00:00:00"
+}
