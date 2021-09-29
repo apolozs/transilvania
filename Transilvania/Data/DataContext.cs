@@ -23,144 +23,144 @@ namespace Transilvania.Data
                 {    
                 Quartos.Add(new Quarto
                 {
-                    NomeQuarto= "1",
+                    NomeQuarto= "Quarto de Solteiro",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Cama box de mola",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 100.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "2",
+                    NomeQuarto= "Duplo Solteiro",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Cama box conjugado",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 200.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "3",
+                    NomeQuarto= "Quarto Casal",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Cama box com cofre",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 300.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "4",
+                    NomeQuarto= "Dormitórios",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Rede",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 700.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "5",
+                    NomeQuarto= "Standard",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Beliche",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 110.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "6",
+                    NomeQuarto= "Master",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Bicama",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 22.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "7",
+                    NomeQuarto= "Deluxe",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Tradicional de ferro",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 33.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "8",
+                    NomeQuarto= "Master Superior",
                     QuantidadeDeCamas= 1,
                     TipoDeCamas= "king",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 44.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "9",
+                    NomeQuarto= "Deluxe",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Tradicional com pés",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 190.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "10",
+                    NomeQuarto= "Standard",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Queen",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 199.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "11",
+                    NomeQuarto= "Standard",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Cama hospitalar",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 200.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "12",
+                    NomeQuarto= "Quarto Casal",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Cama baixa",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 210.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "13",
+                    NomeQuarto= "Deluxe",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Camas provençal",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 199.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "14",
+                    NomeQuarto= "Quarto Casal",
                     QuantidadeDeCamas= 1,
                     TipoDeCamas= "king",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 250.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "15",
+                    NomeQuarto= "Quarto Solteiro",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Cama baixa",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 750.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "16",
+                    NomeQuarto= "Deluxe",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Cama box com cama para pet",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 600.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "17",
+                    NomeQuarto= "Master",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Sofá cama",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 900.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "18",
+                    NomeQuarto= "Master",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Camas tecnológicas",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 1000.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "19",
+                    NomeQuarto= "Master",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Minicama infantil",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 800.00
                     });
                     Quartos.Add(new Quarto{
-                    NomeQuarto= "20",
+                    NomeQuarto= "Standard",
                     QuantidadeDeCamas= 1,
-                    TipoDeCamas= "king",
+                    TipoDeCamas= "Cama box com cama dupla",
                     ImagemQuarto= "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
-                    Preco= 10.0
+                    Preco= 356.00
                     });
                 SaveChanges();
             } 
