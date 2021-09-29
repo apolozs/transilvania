@@ -76,7 +76,7 @@ namespace Transilvania.Controllers
         public IActionResult login([FromRoute] string cpf, string senha)
         {
             //Buscar um usuario por id
-            Usuario usuario = _context.Usuarios.First(x => x.Cpf == cpf);
+            Usuario usuario = _context.Usuarios.FirstOrDefault(x => x.Cpf == cpf);
             if (usuario == null)
             {
                 return NotFound("Usuario não encontrado, catapimbas!");
@@ -105,6 +105,15 @@ namespace Transilvania.Controllers
             _context.SaveChanges();
             return Ok(_context.Usuarios.ToList());
         }
+        
+        [HttpPut]
+        [Route("update")]
+         public IActionResult Update([FromBody] Usuario usuario)
+         {
+             _context.Usuarios.Update(usuario);
+             _context.SaveChanges();
+             return Ok(usuario);
+         }
         
     }
 
