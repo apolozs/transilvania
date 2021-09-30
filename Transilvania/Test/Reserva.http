@@ -1,11 +1,11 @@
 
 ###
-POST   https://localhost:5001/api/reserva/create/1/1
+POST   https://localhost:5001/api/reserva/create/2/3
 Content-Type: application/json
 
 {
-    "CheckIn": "2021-10-30",
-    "CheckOut": "2021-10-10"
+    "CheckIn": "2021-08-30",
+    "CheckOut": "2021-09-10"
 }
 
 

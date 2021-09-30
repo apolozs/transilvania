@@ -17,7 +17,7 @@ namespace Transilvania.Data
             public DbSet<Quarto> Quartos { get; set;}
             public DbSet<Reserva> Reservas { get; set;}
             public DbSet<Adicionais> Adicionais { get; set;}
-            private void SetData(){
+                 private void SetData(){
 
                 if (!Quartos.Any())
                 {    
