@@ -42,7 +42,7 @@ namespace Transilvania
 
             services.AddDbContext<DataContext>
             (
-                options => options.UseSqlServer(Configuration.GetConnectionString("Azure"))
+                options => options.UseSqlServer(Configuration.GetConnectionString("AzureSqlServer"))
             );
 
             services.AddControllers();
