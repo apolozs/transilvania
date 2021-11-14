@@ -1,10 +1,10 @@
 
 ###
-POST   https://localhost:5001/api/reserva/create/2/3
+POST   https://localhost:5001/api/reserva/create/1/1
 Content-Type: application/json
 
 {
-    "CheckIn": "2021-08-30",
+    "CheckIn": "2021-06-30",
     "CheckOut": "2021-09-10"
 }
 
@@ -14,3 +14,15 @@ GET https://localhost:5001/api/reserva/list
 
 ###
 GET https://localhost:5001/api/reserva/listbyusuario/1
+
+###
+PUT https://localhost:5001/api/Reserva/update/5
+Content-Type: application/json
+
+
+{
+    "id": 5,
+    
+    "checkIn": "2021-12-13",
+    "checkOut": "2021-12-14"
+  }

@@ -133,6 +133,18 @@ namespace Transilvania.Controllers
             return Ok(_context.Reservas.ToList());
         }
         
+        [HttpPut]
+        [Route("update/{id}")]
+         public IActionResult Update([FromBody] Reserva reserva, [FromRoute]int id)
+         {
+             if (reserva.CheckIn > reserva.CheckOut)
+                {
+                    throw new Exception ("Você não pode sair do Hotel sem ter entrado ... Ai que burro");
+                }
+             _context.Reservas.Update(reserva);
+             _context.SaveChanges();
+             return Ok(reserva);
+         }
     }
 
 }
