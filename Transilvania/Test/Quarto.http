@@ -4,11 +4,11 @@ Content-Type: application/json
 
 {
  
-        "NomeQuarto": "2",
+        "NomeQuarto": "Standard",
         "QuantidadeDeCamas": 1,
-        "TipoDeCamas": "king",
-        "ImagemQuarto": "imagem01",
-        "Preco": 10.0
+        "TipoDeCamas": "Beliche",
+        "ImagemQuarto": "https://s2.glbimg.com/NO1Mrkp3Z96htIx8_RhrdHTux0w=/e.glbimg.com/og/ed/f/original/2018/03/08/decoracao-de-quarto-cabeceira-suede-rosa-roupa-de-cama-branco-com-rosa-papel-de-parede-florido-romantico-abajur-e-pendente-brancoarquiteta-leticia-arcangeli.jpg ",
+        "Preco": 110.00
         
 }
 

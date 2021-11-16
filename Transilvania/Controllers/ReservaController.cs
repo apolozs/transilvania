@@ -134,8 +134,8 @@ namespace Transilvania.Controllers
         }
         
         [HttpPut]
-        [Route("update/{id}")]
-         public IActionResult Update([FromBody] Reserva reserva, [FromRoute]int id)
+        [Route("update")]
+         public IActionResult Update([FromBody] Reserva reserva)
          {
              if (reserva.CheckIn > reserva.CheckOut)
                 {
